@@ -38,7 +38,7 @@ const ListProduct = () => {
         <p>Old Price</p>
         <p>New Price</p>
         <p className='category'>Category</p>
-        <p>Remove</p>
+        <p>Action</p>
       </div>
       <div className="listproduct-allproducts">
         <hr />
