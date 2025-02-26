@@ -9,7 +9,8 @@ const AddProduct = () => {
       image:"",
       category:"women",
       old_price:"",
-      new_price:""
+      new_price:"",
+      available: true,
     
     })    
     
@@ -35,11 +36,12 @@ const AddProduct = () => {
           Accept:'applictaion/json',
         },
         body:formData,
-      }).then((resp) => resp.json()).then((data) =>{resposeData=data})
+      }).then((resp) => resp.json()).then((data) =>{resposeData=data});
 
       if(resposeData.success){
         product.image = resposeData.image_url;
         console.log(product);
+        
         await fetch('https://ecommerce-backend-9dq4.onrender.com/addproduct',{
           method:'POST',
           headers:{
